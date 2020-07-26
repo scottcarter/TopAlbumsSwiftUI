@@ -1,8 +1,8 @@
 //
 //  AlbumFeed.swift
-//  TopAlbums
+//  TopAlbumsSwiftUI
 //
-//  Created by Scott Carter on 7/13/20.
+//  Created by Scott Carter on 7/26/20.
 //  Copyright © 2020 Scott Carter. All rights reserved.
 //
 

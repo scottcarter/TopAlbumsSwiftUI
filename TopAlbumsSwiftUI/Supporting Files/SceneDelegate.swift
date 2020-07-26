@@ -19,15 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options _: UIScene.ConnectionOptions
     ) {
 
-        let contentView = ContentView()
+        guard let windowScene = scene as? UIWindowScene else { return }
 
-        // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+        let viewModel = AlbumsViewModel(
+            albumClient: AlbumClient.shared,
+            imageClient: ImageClient.shared
+        )
+
+        let albumsView = AlbumsView(viewModel: viewModel)
+
+
+        // Use a UIHostingController as window root view controller
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UIHostingController(rootView: albumsView)
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
 }
