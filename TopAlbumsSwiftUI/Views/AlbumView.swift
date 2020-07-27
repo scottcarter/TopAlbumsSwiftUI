@@ -11,7 +11,7 @@ import SwiftUI
 struct AlbumView: View {
     private let viewModel: AlbumDisplayViewModel
 
-    @State var image = Image(systemName: "photo")
+    @State var image = Image(systemName: "person.crop.square.fill")
 
     init(viewModel: AlbumDisplayViewModel) {
         self.viewModel = viewModel

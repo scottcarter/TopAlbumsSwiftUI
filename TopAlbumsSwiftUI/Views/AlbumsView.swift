@@ -15,8 +15,8 @@ struct AlbumsView: View {
     init(viewModel: AlbumsViewModel) {
         self.viewModel = viewModel
 
-        UINavigationBar.appearance().backgroundColor = .white
-        UITableView.appearance().backgroundColor = .white
+        UINavigationBar.appearance().backgroundColor = UIColor.systemBackground
+        UITableView.appearance().backgroundColor = UIColor.systemBackground
     }
 
     var body: some View {
