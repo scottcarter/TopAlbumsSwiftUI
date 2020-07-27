@@ -9,9 +9,9 @@
 import Combine
 import Foundation
 
-class AlbumsViewModel: ObservableObject, Identifiable {
+class AlbumsViewModel: ObservableObject { // }, Identifiable {
 
-    @Published var dataSource: [AlbumsRowViewModel] = []
+    @Published var dataSource: [AlbumRowViewModel] = []
 
     let albumClient: AlbumClient
     let imageClient: ImageClient
@@ -32,8 +32,8 @@ private extension AlbumsViewModel {
     func loadAlbums() {
         albumClient.getAlbumFeed()
             .map { response in
-                response.feed.albums.map { album -> AlbumsRowViewModel in
-                    AlbumsRowViewModel(album: album, imageClient: self.imageClient)
+                response.feed.albums.map { album -> AlbumRowViewModel in
+                    AlbumRowViewModel(album: album, imageClient: self.imageClient)
                 }
         }
         .sink(
