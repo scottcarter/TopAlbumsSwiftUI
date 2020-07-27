@@ -13,6 +13,8 @@ struct AlbumView: View {
 
     @State var image = Image(systemName: "person.crop.square.fill")
 
+    let buttonCornerRadius: CGFloat = 5.0
+
     init(viewModel: AlbumDisplayViewModel) {
         self.viewModel = viewModel
     }
@@ -23,6 +25,10 @@ struct AlbumView: View {
                 VStack {
                     Text("\(self.viewModel.albumName)")
                         .font(.headline)
+                        // Choose any text element and set width to cause VStack width to fill
+                        // available Geometry width.
+                        .frame(width: proxy.size.width)
+                        .padding(.top, 10)
                     Text("\(self.viewModel.artistName)")
                         .font(.subheadline)
                         .padding(.vertical, 5)
@@ -46,9 +52,10 @@ struct AlbumView: View {
                         .font(.subheadline)
                         .padding(.bottom, 10)
                     Text("\(self.viewModel.copyright)")
-                        .font(.body)
+                        .font(.subheadline)
+                        .fixedSize(horizontal: false, vertical: true) // https://stackoverflow.com/a/59684944/1949877
+                        .padding(.horizontal, 40)
                 }
-                .padding(.all, 10)
                 .frame(height: proxy.size.height, alignment: .top)
                 .navigationBarTitle("", displayMode: .inline)
 
@@ -57,11 +64,17 @@ struct AlbumView: View {
                         self.viewModel.itunesStore()
                     }) {
                         Text("Visit in iTunes Store")
+                            .frame(width: proxy.size.width - 40.0)
+                            .padding(.all, 5)
+                            .cornerRadius(self.buttonCornerRadius)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: self.buttonCornerRadius)
+                                    .stroke(Color(.label), lineWidth: 1.0)
+                        )
                     }
                 }
                 .padding(.bottom, 20)
                 .frame(height: proxy.size.height, alignment: .bottom)
-
             }
         }
     }
