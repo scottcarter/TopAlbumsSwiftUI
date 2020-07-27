@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A77048F624CDD29500522E88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77048F524CDD29500522E88 /* AppDelegate.swift */; };
 		A77048F824CDD29500522E88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77048F724CDD29500522E88 /* SceneDelegate.swift */; };
-		A77048FA24CDD29500522E88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77048F924CDD29500522E88 /* ContentView.swift */; };
 		A77048FC24CDD29600522E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77048FB24CDD29600522E88 /* Assets.xcassets */; };
 		A77048FF24CDD29600522E88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77048FE24CDD29600522E88 /* Preview Assets.xcassets */; };
 		A770490224CDD29600522E88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A770490024CDD29600522E88 /* LaunchScreen.storyboard */; };
@@ -56,7 +55,6 @@
 		A77048F224CDD29500522E88 /* TopAlbumsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopAlbumsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77048F524CDD29500522E88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A77048F724CDD29500522E88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A77048F924CDD29500522E88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A77048FB24CDD29600522E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A77048FE24CDD29600522E88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A770490124CDD29600522E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				A770492824CDEF5800522E88 /* Models */,
 				A770492A24CDEF7B00522E88 /* Resources */,
 				A770492924CDEF6300522E88 /* Supporting Files */,
-				A77048F924CDD29500522E88 /* ContentView.swift */,
 				A77048FD24CDD29600522E88 /* Preview Content */,
 			);
 			path = TopAlbumsSwiftUI;
@@ -377,7 +374,6 @@
 				A770494124CE096C00522E88 /* AlbumsView.swift in Sources */,
 				A77048F824CDD29500522E88 /* SceneDelegate.swift in Sources */,
 				A770493E24CDFC4000522E88 /* NetworkingError.swift in Sources */,
-				A77048FA24CDD29500522E88 /* ContentView.swift in Sources */,
 				A770494D24CE4A4400522E88 /* AlbumDisplayViewModel.swift in Sources */,
 				A770492C24CDF00600522E88 /* Constants.swift in Sources */,
 				A770494924CE497D00522E88 /* AlbumBuilder.swift in Sources */,

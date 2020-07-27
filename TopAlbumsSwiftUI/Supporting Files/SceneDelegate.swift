@@ -28,8 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let albumsView = AlbumsView(viewModel: viewModel)
 
-
-        // Use a UIHostingController as window root view controller
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UIHostingController(rootView: albumsView)
         self.window = window
@@ -37,4 +35,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 }
-

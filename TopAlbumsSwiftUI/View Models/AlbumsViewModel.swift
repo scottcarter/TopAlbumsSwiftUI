@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 
-class AlbumsViewModel: ObservableObject { // }, Identifiable {
+class AlbumsViewModel: ObservableObject { 
 
     @Published var dataSource: [AlbumRowViewModel] = []
 
