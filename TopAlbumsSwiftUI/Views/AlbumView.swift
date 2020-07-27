@@ -18,33 +18,51 @@ struct AlbumView: View {
     }
 
     var body: some View {
-        VStack {
-            Text("\(viewModel.albumName)")
-                .font(.headline)
-            Text("\(viewModel.artistName)")
-                .font(.subheadline)
-                .padding(.vertical, 10)
+        GeometryReader { proxy in
+            ZStack {
+                VStack {
+                    Text("\(self.viewModel.albumName)")
+                        .font(.headline)
+                    Text("\(self.viewModel.artistName)")
+                        .font(.subheadline)
+                        .padding(.vertical, 5)
 
-            image
-                .resizable()
-                .frame(
-                    width: Constants.Album.albumArtHeight,
-                    height: Constants.Album.albumArtHeight
-            )
-                .onAppear {
-                    self.viewModel.downloadImage { image in
-                        self.image = Image(uiImage: image)
+                    self.image
+                        .resizable()
+                        .frame(
+                            width: Constants.Album.albumArtHeight,
+                            height: Constants.Album.albumArtHeight
+                    )
+                        .onAppear {
+                            self.viewModel.downloadImage { image in
+                                self.image = Image(uiImage: image)
+                            }
                     }
-            }
 
-            Text("\(viewModel.genre)")
-                .font(.subheadline)
-                .padding(.vertical, 10)
-            Text("\(viewModel.releaseDate)")
-                .font(.subheadline)
-                .padding(.bottom, 10)
-            Text("\(viewModel.copyright)")
-                .font(.body)
+                    Text("\(self.viewModel.genre)")
+                        .font(.subheadline)
+                        .padding(.vertical, 10)
+                    Text("\(self.viewModel.releaseDate)")
+                        .font(.subheadline)
+                        .padding(.bottom, 10)
+                    Text("\(self.viewModel.copyright)")
+                        .font(.body)
+                }
+                .padding(.all, 10)
+                .frame(height: proxy.size.height, alignment: .top)
+                .navigationBarTitle("", displayMode: .inline)
+
+                Group {
+                    Button(action: {
+                        self.viewModel.itunesStore()
+                    }) {
+                        Text("Visit in iTunes Store")
+                    }
+                }
+                .padding(.bottom, 20)
+                .frame(height: proxy.size.height, alignment: .bottom)
+
+            }
         }
     }
 }

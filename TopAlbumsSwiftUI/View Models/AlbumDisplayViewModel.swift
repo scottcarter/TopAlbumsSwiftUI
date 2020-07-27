@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AlbumDisplayViewModel: AlbumViewModel {
 
@@ -28,6 +29,13 @@ class AlbumDisplayViewModel: AlbumViewModel {
 
     var copyright: String {
         return album.copyright
+    }
+
+    func itunesStore() {
+        if let url = URL(string: album.albumURL),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 
 }

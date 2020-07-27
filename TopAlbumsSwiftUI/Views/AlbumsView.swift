@@ -16,6 +16,7 @@ struct AlbumsView: View {
         self.viewModel = viewModel
 
         UINavigationBar.appearance().backgroundColor = .white
+        UITableView.appearance().backgroundColor = .white
     }
 
     var body: some View {
@@ -30,6 +31,7 @@ struct AlbumsView: View {
                 .listStyle(GroupedListStyle()) // Empty list shows only 1 row
                 .navigationBarTitle("Top Albums")
         }
+
     }
 }
 
