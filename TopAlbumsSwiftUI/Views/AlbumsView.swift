@@ -42,7 +42,7 @@ private extension AlbumsView {
     }
     
     var albumRows: some View {
-        ForEach(viewModel.dataSource, content: AlbumsRowView.init(viewModel:))
+        ForEach(viewModel.dataSource, content: AlbumRowView.init(viewModel:))
     }
 }
 

@@ -9,7 +9,7 @@
 import SwiftUI
 
 // This entity will act as a factory to create screens that are
-// needed when navigating from the AlbumsRowView.
+// needed when navigating from the AlbumRowView.
 enum AlbumBuilder {
   static func makeAlbumView(
     withAlbum album: Album,

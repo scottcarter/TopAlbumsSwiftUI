@@ -1,5 +1,5 @@
 //
-//  AlbumsRowView.swift
+//  AlbumRowView.swift
 //  TopAlbumsSwiftUI
 //
 //  Created by Scott Carter on 7/26/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct AlbumsRowView: View {
+struct AlbumRowView: View {
     private let viewModel: AlbumRowViewModel
 
     @State var image = Image(systemName: "person.crop.square.fill")
@@ -73,6 +73,6 @@ struct AlbumsRowView_Previews: PreviewProvider {
             imageClient: ImageClient.shared
         )
 
-        return AlbumsRowView(viewModel: viewModel)
+        return AlbumRowView(viewModel: viewModel)
     }
 }
